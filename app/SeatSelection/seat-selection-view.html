@@ -1,0 +1,71 @@
+<div class="container" id="seat-selection-margin">
+    <h2 class="align-center">Movie Booking Details</h2>
+    <hr class="seperator">
+    <p class="text-center"><strong>Name :</strong> <span>{{movieName}}</span></p>
+    <p class="text-center"><strong>Day :</strong> <span>{{movieDay}} <button type="button" class="btn btn-primary btn-xs" ng-click="editMovieDay()">Edit</button></span></p>
+    <p class="text-center"><strong>Time :</strong> <span>{{movieTime}}</span></p>
+    <p class="text-center"><strong>Seating Class :</strong> <span>{{movieSeatingClass}}</span></p>
+    <p class="text-center" ng-if="numOfSeats"><strong>Seats Selected :</strong> <span>{{selectedSeats}}</span></p>
+
+    <p class="text-center"><strong>Select No. Of Seats :</strong> <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">Select</button></p>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Select Seats</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div class="checkbox" ng-repeat="assetType in assetTypeList">
+                            <label><input type="checkbox" ng-model="assetType.checked" value="{{assetType.Id}}" ng-click="selectNum(assetType)">{{assetType.id}}</label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="seatSelected()">OK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<div class="container" id="confirmMargin">
+    <h2 class="text-center">Booking Confirmation via</h2>
+    <hr class="seperator">
+    <form class="form-horizontal   text-center">
+        <div class="radio-inline">
+            <label>
+            <input type="radio" ng-model="bookingConfirm" ng-value="'sms'" name="optradio" ng-click="sms()">SMS</label>
+        </div>
+        <div class="form-group row" ng-if="phnumberHide">
+            <div class="col-sm-4">
+                <label calss="control-label" id="numberMarginLeft" for="phone">Phone Number:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="phone" name="phoneNumber">
+            </div>
+        </div> <br/>
+        <span><strong> OR </strong></span>
+        <br>
+        <div class="radio-inline">
+            <label>
+            <input ng-model="bookingConfirm" type="radio" ng-value="'eTickect'" name="optradio" ng-click="eTickect()" ng-checked="false">eTicket
+            </label>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-10">
+                <button type="button" ng-click="redirectToSuccess()" class="btn btn-primary" ng-disabled="signUpForm.$invalid">Submit</button>
+
+            </div>
+        </div>
+    </form>
+    <div class="alert alert-danger fade in text-center" ng-if="errorMesg">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Alert!</strong> Please confirm via SMS or eTickect.
+</div>
+    </div>
+</div>

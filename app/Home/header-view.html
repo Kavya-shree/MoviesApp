@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a ng-href="/Home">Home</a></li>
+        <li><a ng-href="/MovieList">All Movies</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-if="!isUserLoggedIn">
+            <a ng-href="/Login">
+             <span class="glyphicon glyphicon-user"></span> Login/SignUp</a>
+        </li>
+        <!-- <li ng-if="isUserLoggedIn">
+            <a ng-href="/Home"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+        </li> -->
+        <li ng-if="isUserLoggedIn" class="dropdown">
+            <a ng-href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Profile <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+          <li><a ng-href="/Profile">My Account</a></li>
+          <li id="userLogOut"><a ng-href="/">Logout</a></li>
+          
+        </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+<div>
+      <h2 class="h2-style">Login</h2>
+        <form class="form-horizontal" name="loginForm">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" name="email" ng-model="loginEmail" valid-form/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" id="pwd" ng-model="loginPassword">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="alert alert-danger col-sm-5" ng-if="loginInValid">
+                    <button type="button" class="close" ng-click="cancel()">×</button> <strong>Oops!</strong> {{loginInValidMesg}}
+                </div>
+            </div>
+            <div class="form-actions form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            <button type="button"  ng-click="loginSubmit()" class="btn btn-primary">Login</button>
+            <span> Don't have an account? <a ng-href="/SignUp">Sign Up</a></span>
+            
+            </div>
+        </div>
+        </form> 
+</div>

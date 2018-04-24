@@ -1,0 +1,32 @@
+<div class="container">
+	<div class="row">
+        <div class="col-sm-9 col-sm-offset-2">
+            <div id="search-margin-top"> 
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search Movie" ng-model="search.title">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<div class="container content">
+<p ng-if="notLogedIn" class="loginAlert">Please Login to Proceed</p>
+	<ul class="list-group">
+
+		<li class="list-group-item border-radius movieListMargin" ng-repeat="mitem in movieList | filter: search">
+		<div class="movie-item">
+			<img ng-src="{{mitem.image}}">
+			<h3>{{mitem.title}} <span>- {{mitem.releaseYear}}</span></h3>
+			<h4>Rating: {{mitem.rating}}</h4>
+			<a ng-href="/Booking/{{movieList.indexOf(mitem)}}" ng-click="vvv()" class="btn btn-sm btn-primary" ng-disabled="disabled">Book Now</a>
+			
+		</div>
+		</li>
+	</ul>
+
+</div>

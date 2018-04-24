@@ -1,0 +1,148 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+.h2-style{
+	padding: 19px;
+    position: relative;
+    left: 190px;
+}
+/*.dashboard-p-style{
+	 text-align: center;
+    padding: 70px;
+    font-size: 22px;
+    font-family: -webkit-pictograph;
+}*/
+.align-center{
+  text-align: -webkit-center;
+}
+.content{
+   
+    margin-top: 15px;
+   
+    border: solid 1px transparent;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=90, Color=#9d9c9c)";
+   
+}
+.movie-item{
+      height: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.content ul li img {
+    width: 77px;
+    height: 77px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    float: right;
+    margin-top: 11px;
+}
+.content ul li h3 {
+    font-family: "NotoSans", Tahoma;
+    color: #727171;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.content ul li h3 span {
+    font-size: 13px;
+    color: #727171;
+    font-family: "Armata", Tahoma;
+}
+.content ul li h4 {
+    color: #727171;
+    margin-top: 5px;
+}
+.border-radius{
+    border-top-left-radius: 14px !important;
+    border-top-right-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+  border-right:0; 
+  box-shadow:0 0 0; 
+  border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+#search-margin-top{
+   margin-top: 4%;
+}
+.sign-btn-color{
+   background-color: #42b72a;
+  border-color: #42b72a;
+}
+.sign-btn-color:hover {
+    color: #fff;
+    background-color: #42b72a;
+    border-color: #42b72a;
+}
+#booking-margin-top{
+  margin-top: 4%;
+}
+.book-img{
+  height:240px; 
+  margin-left:-15px;
+}  
+#book-margin-bottom{
+  margin-bottom: 40px;
+}
+#seat-selection-margin{
+  margin-bottom: 40px;
+}
+#profile-margin{
+  margin-top: 2%;
+  margin-bottom: 2%;
+} 
+.movie-title{
+      margin-top: 7px;
+}
+.summary-hr-margin{
+    margin-top: 7px !important;
+    margin-bottom: 8px !important;
+}
+.seperator{
+  margin-top: 6px !important;
+  border-top: 1px solid rgb(51, 122, 183) !important;;
+  width: 80px !important;
+}
+    
+#qrcode{
+    position: relative;
+    left: 405px;
+} 
+.sucessColor{
+      color: #3c763d
+} 
+.modal-open {
+    overflow: scroll !important;
+}
